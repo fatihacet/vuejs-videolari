@@ -1,0 +1,75 @@
+body {
+  font-size: 13px;
+  line-height: 19px;
+  color: #111;
+  font-family: Arial, sans-serif;
+  background: #FFF;
+}
+
+h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  border-bottom: 1px solid #DDD;
+  padding: 15px 0;
+  overflow: hidden;
+}
+
+.item:first-child {
+  border-top: 1px solid #DDD;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+}
+
+h4 {
+  color: #0066c0;
+  font-size: 16px;
+  line-height: 1.255;
+}
+
+.image, .info {
+  float: left;
+}
+
+.image {
+  margin-right: 20px;
+}
+
+.seller {
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.status.available {
+  color: #008a00;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.shipping {
+  color: #555;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.info a {
+  color: #0066c0;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+.saved-header {
+  margin-top: 50px;
+}
+
+a.secondary {
+  padding-left: 5px;
+  margin-left: 3px;
+  border-left: 1px solid #CCC;
+}
