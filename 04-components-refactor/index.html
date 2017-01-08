@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>VueJS Demo</title>
+  <link rel="stylesheet" type="text/css" href="app.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p v-if="isLoading">Loading</p>
+
+    <vue-cart
+      :cart=cart
+      title="Shopping Cart"
+      type="shoppingCart"
+      v-on:itemchangedoncart="handleItemChange"
+    ></vue-cart>
+
+    <vue-cart
+      :cart=saved
+      title="Saved for later"
+      type="savedCart"
+      v-on:itemchangedoncart="handleItemChange"
+    ></vue-cart>
+
+  </div>
+</body>
+</html>
