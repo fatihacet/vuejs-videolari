@@ -25,7 +25,7 @@
           <p class="seller">by {{item.seller}}</p>
           <p class="status available" v-if="item.isAvailable">In Stock</p>
           <p class="shipping" v-if="item.isEligible">Eligible for FREE Shipping & FREE Returns</p>
-          <a href="#" v-on:click="removeFromCart(index, true)">Delete</a>
+          <a href="#" v-on:click="removeFromCart(index)">Delete</a>
           <a href="#" class="secondary" v-on:click="saveForLater(index)">Save for later</a>
         </div>
       </div>

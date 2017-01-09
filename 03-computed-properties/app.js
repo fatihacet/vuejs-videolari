@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
       saved: []
     },
     methods: {
-      removeFromCart(index, fromCart) {
+      removeFromCart(index) {
         this.cart.splice(index, 1);
       },
       saveForLater(index) {
