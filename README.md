@@ -15,3 +15,7 @@ YouTube'da Turkce VueJS anlattigim videolarda yazdigim kodlari bu repo altinda t
 
 #### VueJS: Components
 [![http://f.acet.me/feLa.png](http://f.acet.me/feLa.png)](https://www.youtube.com/watch?v=LWM_7DpsnW4)
+
+#### VueJS: vue-cli ve .vue dosyalarinin yapisi 
+
+[![http://f.acet.me/cGUy.png](http://f.acet.me/cGUy.png)](https://www.youtube.com/watch?v=Y8pVruMaB9c)
