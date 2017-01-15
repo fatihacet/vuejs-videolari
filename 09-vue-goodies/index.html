@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>VueJS Demo</title>
+  <script src="https://vuejs.org/js/vue.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+  <div id="vmodel">
+    <input type="text" v-model.trim="message" />
+    <button @click="log">Log to console</button>
+    <button @click="setValue">Set value</button>
+
+    <select v-model="selectedVal">
+      <option value="foo">Foo</option>
+      <option value="bar">Bar</option>
+      <option value="baz">Baz</option>
+    </select>
+
+    <input type="checkbox" v-model="isSelected" />
+  </div>
+
+  <style> [v-cloak] { display: none; }</style>
+  <div id="vcloak" v-cloak>
+    <ul>
+      <li v-for="user in users">{{user.name}}</li>
+    </ul>
+  </div>
+
+  <div id="slots">
+    <v-select>
+      <v-option value="Foo"></v-option>
+      <v-option value="Bar"></v-option>
+      <v-option value="Baz"></v-option>
+    </v-select>
+  </div>
+
+  <div id="nextTick">
+    {{message}}
+    <button @click="change">Change message</button>
+  </div>
+
+  <div id="modifiers">
+    <a href="/foo" @click.prevent="log">Go to Foo</a>
+    <button @click.alt="log">Button</button>
+
+    <input @keyup.alt.enter="log" />
+    <input @keyup.a="log" />
+  </div>
+
+  <div id="filters">
+    <p>{{name | uppercase}}</p>
+    <p>{{price | withTax | uppercase }}</p>
+  </div>
+
+</body>
+</html>
