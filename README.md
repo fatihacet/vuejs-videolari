@@ -2,22 +2,25 @@ YouTube'da Turkce VueJS anlattigim videolarda yazdigim kodlari bu repo altinda t
 
 
 #### VueJS 01: VueJS ile Uygulama Geliştirme Sunumu
-[![http://f.acet.me/O8SV.png](http://f.acet.me/O8SV.png)](https://www.youtube.com/watch?v=byuboztKw9E)
+[![http://f.acet.me/O8SV.png](http://f.acet.me/O8SV.png)](https://www.youtube.com/watch?v=byuboztKw9E&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
 
 #### VueJS 02: Hello World!
-[![http://f.acet.me/L4Cb.png](http://f.acet.me/L4Cb.png)](https://www.youtube.com/watch?v=Zkes5mS8n40)
+[![http://f.acet.me/L4Cb.png](http://f.acet.me/L4Cb.png)](https://www.youtube.com/watch?v=Zkes5mS8n40&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
 
 #### VueJS 03: v-for ile Amazon benzeri bir shopping cart yapiyoruz
-[![http://f.acet.me/3gkk.png](http://f.acet.me/3gkk.png)](https://www.youtube.com/watch?v=kNmZAbgLkdw)
+[![http://f.acet.me/3gkk.png](http://f.acet.me/3gkk.png)](https://www.youtube.com/watch?v=kNmZAbgLkdw&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
 
 #### VueJS 04: Computed Properties ile dinamik data kullanimi
-[![http://f.acet.me/fpxQ.png](http://f.acet.me/fpxQ.png)](https://www.youtube.com/watch?v=hsrAukdWj8Q)
+[![http://f.acet.me/fpxQ.png](http://f.acet.me/fpxQ.png)](https://www.youtube.com/watch?v=hsrAukdWj8Q&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
 
 #### VueJS 05: Components
-[![http://f.acet.me/feLa.png](http://f.acet.me/feLa.png)](https://www.youtube.com/watch?v=LWM_7DpsnW4)
+[![http://f.acet.me/feLa.png](http://f.acet.me/feLa.png)](https://www.youtube.com/watch?v=LWM_7DpsnW4&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
 
 #### VueJS 06: vue-cli ve .vue dosyalarinin yapisi
-[![http://f.acet.me/cGUy.png](http://f.acet.me/cGUy.png)](https://www.youtube.com/watch?v=Y8pVruMaB9c)
+[![http://f.acet.me/cGUy.png](http://f.acet.me/cGUy.png)](https://www.youtube.com/watch?v=Y8pVruMaB9c&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
 
 #### VueJS 07: Giphy API kullanarak yeni bir app yapalim
-[![http://f.acet.me/5pIW.png](http://f.acet.me/5pIW.png)](https://www.youtube.com/watch?v=KWG4TbRXU8I)
+[![http://f.acet.me/5pIW.png](http://f.acet.me/5pIW.png)](https://www.youtube.com/watch?v=KWG4TbRXU8I&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
+
+#### VueJS 08: Vue Router
+[![http://f.acet.me/AKmo.png](http://f.acet.me/AKmo.png)](https://www.youtube.com/watch?v=1Z7WfxiDTjk&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
