@@ -24,3 +24,7 @@ YouTube'da Turkce VueJS anlattigim videolarda yazdigim kodlari bu repo altinda t
 
 #### VueJS 08: Vue Router
 [![http://f.acet.me/AKmo.png](http://f.acet.me/AKmo.png)](https://www.youtube.com/watch?v=1Z7WfxiDTjk&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
+
+
+#### VueJS 09: BONUS 1: Eksik kalan kisimlar
+[![http://f.acet.me/yrgn.png](http://f.acet.me/yrgn.png)](https://www.youtube.com/watch?v=V0wQxkaLpmk&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
