@@ -28,3 +28,7 @@ YouTube'da Turkce VueJS anlattigim videolarda yazdigim kodlari bu repo altinda t
 
 #### VueJS 09: BONUS 1: Eksik kalan kisimlar
 [![http://f.acet.me/yrgn.png](http://f.acet.me/yrgn.png)](https://www.youtube.com/watch?v=V0wQxkaLpmk&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
+
+
+#### VueJS 10: Vue JS icin Unit ve E2E testler yazmak
+[![http://f.acet.me/UOPD.png](http://f.acet.me/UOPD.png)](https://www.youtube.com/watch?v=Ym4uH9kZEDc&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
