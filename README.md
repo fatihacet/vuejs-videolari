@@ -32,3 +32,7 @@ YouTube'da Turkce VueJS anlattigim videolarda yazdigim kodlari bu repo altinda t
 
 #### VueJS 10: Vue JS icin Unit ve E2E testler yazmak
 [![http://f.acet.me/UOPD.png](http://f.acet.me/UOPD.png)](https://www.youtube.com/watch?v=Ym4uH9kZEDc&list=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
+
+
+#### VueJS 11: Swagger ile API tasarlayalim
+[![http://f.acet.me/hLZO.png](http://f.acet.me/hLZO.png)](https://www.youtube.com/watch?v=i1ZyC0N-4Z8=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
