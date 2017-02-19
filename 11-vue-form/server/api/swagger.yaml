@@ -1,0 +1,52 @@
+---
+swagger: "2.0"
+info:
+  description: "#### A simple API for a VueJS demo app\n"
+  version: "1.0.0"
+  title: "VueJS Demo API"
+host: "localhost:8090"
+basePath: "/"
+schemes:
+- "http"
+paths:
+  /labels:
+    get:
+      operationId: "labelsGet"
+      parameters: []
+      responses:
+        200:
+          description: "Return all labels"
+      x-swagger-router-controller: "Default"
+  /labels/add:
+    post:
+      operationId: "labelsAdd"
+      parameters:
+      - name: "title"
+        in: "formData"
+        required: true
+        type: "string"
+      - name: "description"
+        in: "formData"
+        required: false
+        type: "string"
+      - name: "color"
+        in: "formData"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Return created label"
+      x-swagger-router-controller: "Default"
+  /labels/remove/{id}:
+    delete:
+      operationId: "labelsRemove"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Remove a label"
+      x-swagger-router-controller: "Default"
+definitions: {}
