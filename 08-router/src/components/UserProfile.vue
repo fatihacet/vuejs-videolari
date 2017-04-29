@@ -12,7 +12,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   name: 'UserProfile',
@@ -24,8 +23,8 @@ export default {
   methods: {
     fetchData() {
       fetch(`https://jsonplaceholder.typicode.com/users/${this.$route.params.id}`)
-      .then((res) => { return res.json() })
-      .then((data) => { this.userData = data; })
+        .then((res) => { return res.json() })
+        .then((data) => { this.userData = data; })
     },
     goBack() {
       this.$router.push({ name: 'home' });
@@ -36,7 +35,7 @@ export default {
   },
   computed: {
     postsLink() {
-      return `/user/${this.$route.params.id}/postss`;
+      return `/user/${this.$route.params.id}/posts`;
     },
     nextUserLink() {
       return `/user/${parseInt(this.$route.params.id, 10) + 1}`;

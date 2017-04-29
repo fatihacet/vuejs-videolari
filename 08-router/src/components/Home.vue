@@ -6,7 +6,6 @@
   </div>
 </template>
 
-
 <script>
 import UserItem from './UserItem.vue'
 
@@ -19,8 +18,8 @@ export default {
   },
   created() {
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then((res) => { return res.json() })
-    .then((users) => { this.users = users; })
+      .then((res) => { return res.json() })
+      .then((users) => { this.users = users; })
   },
   components: { UserItem }
 }

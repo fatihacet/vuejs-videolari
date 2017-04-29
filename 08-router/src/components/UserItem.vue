@@ -8,7 +8,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   name: 'UserItem',
@@ -17,7 +16,7 @@ export default {
   },
   computed: {
     profileLink() {
-      return `/user/${this.user.id}`
+      return `/user/${this.user.id}`;
     }
   }
 }

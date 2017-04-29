@@ -9,7 +9,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   name: 'UserPosts',
@@ -25,8 +24,8 @@ export default {
   },
   created() {
     fetch(`https://jsonplaceholder.typicode.com/posts?userId=${this.$route.params.userId}`)
-    .then((res) => { return res.json() })
-    .then((data) => { this.posts = data; })
+      .then((res) => { return res.json() })
+      .then((data) => { this.posts = data; })
   }
 }
 </script>
