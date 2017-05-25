@@ -36,3 +36,7 @@ YouTube'da Turkce VueJS anlattigim videolarda yazdigim kodlari bu repo altinda t
 
 #### VueJS 11: Swagger ile API tasarlayalim
 [![http://f.acet.me/hLZO.png](http://f.acet.me/hLZO.png)](https://www.youtube.com/watch?v=i1ZyC0N-4Z8=PLa3NvhdFWNipwk1KXeUpVQnAiAfuBw4El)
+
+
+#### VueJS 12: Single Page Application
+[![http://f.acet.me/cHqm.png](http://f.acet.me/cHqm.png)](https://www.youtube.com/watch?v=dr--gckkxi8&index=4&list=PLa3NvhdFWNirpx6x-LIMfTrwOfLzCkfAU)
