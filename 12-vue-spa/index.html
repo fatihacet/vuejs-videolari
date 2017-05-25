@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>12-vue-spa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyDJd6eGWFyUliITIJG0z_E_8l2jcBZls5M",
+        authDomain: "vizyonvueapp.firebaseapp.com",
+        databaseURL: "https://vizyonvueapp.firebaseio.com",
+        projectId: "vizyonvueapp",
+        storageBucket: "vizyonvueapp.appspot.com",
+        messagingSenderId: "194248697634"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
