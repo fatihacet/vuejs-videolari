@@ -1,7 +1,8 @@
 import service from '../services/service';
 
 const state = {
-  movies: []
+  movies: [],
+  movieDetails: {},
 };
 
 const getters = {
@@ -27,6 +28,12 @@ const mutations = {
   setMovies(state, movies) {
     state.movies = movies;
   },
+
+  setMovieDetails(state, payload) {
+    const { id, data } = payload;
+
+    state.movieDetails[id] = data;
+  },
 };
 
 const actions = {
@@ -34,7 +41,16 @@ const actions = {
     return service.fetchMovies().then((snapshot) => {
       context.commit('setMovies', snapshot.val());
     });
-  }
+  },
+
+  fetchMovieDetails(context, id) {
+    return service.fetchMovieDetails(id).then((snapshot) => {
+      context.commit('setMovieDetails', {
+        id: id,
+        data: snapshot.val(),
+      });
+    });
+  },
 };
 
 
