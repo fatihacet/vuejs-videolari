@@ -1,6 +1,6 @@
 # 12-vue-spa
 
-> A Vue.js project
+> Vue JS Single Page Application demo for movie ticketing website
 
 ## Build Setup
 

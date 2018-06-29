@@ -12,8 +12,8 @@
   animation: spin 1s linear infinite;
   display: inline-block;
   position: relative;
-  margin: 30px 0 30px -20px;
   left: 50%;
+  margin: 30px 0 30px -20px;
 }
 
 @keyframes spin {

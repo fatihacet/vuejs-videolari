@@ -1,0 +1,21 @@
+image: node:latest
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+ - apt-get update -qq && apt-get install -y -qq sshpass
+
+deploy:
+  only:
+  - master
+  script:
+  - rm ./package-lock.json
+  - npm install
+  - npm run build
+  - rm -rf .git
+  - rm -rf node_modules
+  - sshpass -V
+  - export SSHPASS=$PASSWD
+  - sshpass -e scp -o stricthostkeychecking=no -r . root@178.128.240.68:/var/www/html

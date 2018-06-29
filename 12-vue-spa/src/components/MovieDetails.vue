@@ -1,16 +1,54 @@
+<template>
+  <div>
+    <loader v-if="isLoading" />
+    <section v-if="hasDetails">
+      <img :src="backdropPath" class="backdrop" />
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-sm-4">
+            <img :src="posterPath" class="poster" />
+          </div>
+          <div class="col-sm-8">
+            <div class="movie-details">
+              <h2 class="movie-title">
+                {{details.original_title}}
+                <a :href="ticketsPath" type="button" class="btn btn-success buy-btn">Get Tickets</a>
+              </h2>
+              <p>{{details.overview}}</p>
+              <span>Runtime: {{runtime}}</span><br/>
+              <span>Average Rating: {{details.vote_average.toFixed(1)}}</span><br/>
+              <span>Production Company: {{details.production_companies[0].name}}</span><br/>
+              <span>Release Date: {{details.release_date}}</span><br/>
+              <h4 class="pt-3">Cast</h4>
+              <img :src="castAvatar(person.profile_path)" v-for="person in details.cast" class="cast-avatar" />
+              <h4 class="pt-3">Trailers</h4>
+              <a :href="trailer.url" v-for="trailer in trailers" target="_blank" class="trailer-link">
+                <div class="play-icon" />
+                <img :src="trailer.thumbnail" class="thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
 <script>
 import Loader from './Loader.vue';
-import BackdropImage from './BackdropImage.vue';
-import Poster from './Poster.vue';
 
 export default {
+  components: {
+    Loader,
+  },
   data() {
     return {
-      hasDetails: false,
       isLoading: true,
+      hasDetails: false,
     }
   },
   created() {
+    this.movieId = this.$route.params.id;
     this.$store.dispatch('fetchMovieDetails', this.movieId).then(() => {
       this.isLoading = false;
       this.hasDetails = true;
@@ -22,23 +60,18 @@ export default {
     }
   },
   computed: {
-    movieId() {
-      return this.$route.params.id;
-    },
-    movie() {
+    details() {
       return this.$store.state.movieDetails[this.movieId];
     },
-    runtime() {
-      const { runtime } = this.movie;
-
-      const hours = Math.floor(runtime / 60);
-      const minutes = runtime - (60 * hours);
-
-      return `${hours}h ${minutes}m`;
+    backdropPath() {
+      return `https://image.tmdb.org/t/p/w1280${this.details.backdrop_path}`;
+    },
+    posterPath() {
+      return `https://image.tmdb.org/t/p/w500${this.details.poster_path}`;
     },
     trailers() {
       const trailers = [];
-      this.movie.videos.results.forEach((video) => {
+      this.details.videos.results.forEach((video) => {
         if (video.type === 'Trailer') {
           trailers.push({
             thumbnail: `https://i.ytimg.com/vi/${video.key}/sddefault.jpg`,
@@ -48,75 +81,53 @@ export default {
       });
       return trailers;
     },
+    runtime() {
+      const { runtime } = this.details;
+      const hours = Math.floor(runtime / 60);
+
+      return `${hours}h ${runtime - (hours * 60)}m`;
+    },
     ticketsPath() {
-      return `/movie/${this.movieId}/tickets`;
+      return `/movie/${this.details.id}/tickets`;
     }
   },
-  components: {
-    Loader,
-    BackdropImage,
-    Poster,
-  }
 }
 </script>
 
-
-<template>
-  <section>
-    <loader v-if="isLoading" />
-    <section v-if="hasDetails">
-      <backdrop-image :imageName="movie.backdrop_path" />
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-sm-4">
-            <poster :posterName="movie.poster_path" />
-          </div>
-          <div class="col-sm-8 details">
-            <h2>{{movie.title}}</h2>
-            <p>{{movie.overview}}</p>
-            <div>Runtime: {{runtime}}</div>
-            <div>Average Rating: {{movie.vote_average.toFixed(1)}}</div>
-            <div>Production Company: {{movie.production_companies[0].name}}</div>
-            <div>Release Date: {{movie.release_date}}</div>
-            <h4 class="mt-4">Cast</h4>
-            <img v-for="person in movie.cast" :src="castAvatar(person.profile_path)" class="cast-avatar" />
-            <h4 class="mt-4">Trailers</h4>
-            <a v-for="trailer in trailers" :href="trailer.url" class="trailer" target="_blank">
-              <span></span>
-              <img :src="trailer.thumbnail" />
-            </a>
-            <a :href="ticketsPath" class="btn btn-success ticket-button">Get tickets</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
-</template>
-
 <style>
-.details {
-  color: #fff;
+.movie-title {
+  position: relative;
 }
-.cast-avatar {
-  width: 45px;
-  height: 45px;
-  border-radius: 45px;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  margin-right: 10px;
+img.backdrop {
+  width: 100%;
+  height: 100vh;
+  filter: blur(30px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.1);
 }
-.trailer {
+img.poster {
+  width: 100%;
+  border-radius: 6px;
+}
+.movie-details {
+  float: left;
+  color: #FFF;
+  max-width: 700px;
+}
+.thumbnail {
+  width: 150px;
+  height: 110px;
+}
+.trailer-link {
   width: 150px;
   height: 110px;
   display: inline-block;
   margin-right: 20px;
   position: relative;
 }
-.trailer img {
-  width: 100%;
-  height: 100%;
-}
-.trailer span {
+.play-icon {
   background-image: url(http://f.acet.me/LXIk.png);
   background-size: 75px 75px;
   position: absolute;
@@ -124,11 +135,17 @@ export default {
   height: 75px;
   top: 18px;
   left: 36px;
-  display: block;
 }
-.ticket-button {
+.cast-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  border: 2px solid #FFF;
+  margin-right: 10px;
+}
+.buy-btn {
   position: absolute;
-  top: 0;
-  right: 15px;
+  right: 0;
+  top: -3px;
 }
 </style>
