@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
         this.saved.push(item[0]);
       },
       removeFromSavedList(index) {
-        this.saved.splice(index);
+        this.saved.splice(index,1);
       },
       moveToCart(index) {
         const item = this.saved.splice(index, 1);
